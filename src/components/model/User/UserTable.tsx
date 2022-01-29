@@ -8,7 +8,7 @@ const UserTableItem: VFC<UserProps> = ({ user }) => {
   const { id, name, gitHubUserName } = user;
   return (
     <tr className="whitespace-nowrap">
-      <td className="py-4 px-6 text-sm text-gray-500">{id}</td>
+      <td className="py-4 px-6 text-sm text-red-500">{id}</td>
       <td className="py-4 px-6">{name}</td>
       <td className="py-4 px-6">
         {gitHubUserName ? (
