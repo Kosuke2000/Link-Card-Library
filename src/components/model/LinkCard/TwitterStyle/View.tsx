@@ -3,17 +3,10 @@ import { VFC } from "react";
 
 import { LinkCardViewProps } from "@/types/LinkCard";
 
+import { urlToDomain } from "../UrlToDomain";
+
 export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
   const { title, description, pageUrl, ogImgUrl } = ogp;
-
-  // URLからドメイン部分を抽出
-  // ex. https://hoge.com/foo/bar → hoge.com
-  const urlToDomain = (pageUrl: string) => {
-    const secondSlash = pageUrl.indexOf("/", pageUrl.indexOf("/") + 1);
-    const thirdSlash = pageUrl.indexOf("/", pageUrl.indexOf("/") + 2);
-
-    return pageUrl.substring(secondSlash + 1, thirdSlash);
-  };
 
   return (
     <article className="w-96 rounded-xl border border-slate-300 border-solid">

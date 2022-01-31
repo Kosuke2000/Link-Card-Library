@@ -1,4 +1,8 @@
 import {
+  NoteStyleLinkCard,
+  NOTE_STYLE_LINKCARD_PROPS,
+} from "@/components/model/LinkCard/NoteStyle";
+import {
   NotionStyleLinkCard,
   NOTION_STYLE_LINKCARD_PROPS,
 } from "@/components/model/LinkCard/NotionStyle";
@@ -20,6 +24,7 @@ export const Top: NextPage = () => {
       <NotionStyleLinkCard linkCard={NOTION_STYLE_LINKCARD_PROPS} />
       <ZennStyleLinkCard linkCard={ZENN_STYLE_LINKCARD_PROPS} />
       <TwitterStyleLinkCard linkCard={TWITTER_STYLE_LINKCARD_PROPS} />
+      <NoteStyleLinkCard linkCard={NOTE_STYLE_LINKCARD_PROPS} />
       {/* <UserTable users={mockUserList} /> */}
     </main>
   );
