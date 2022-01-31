@@ -6,7 +6,8 @@ import { LinkCardViewProps } from "@/types/LinkCard";
 export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
   const { title, description, pageUrl, ogImgUrl } = ogp;
 
-  // pageUrlの2番目と３番目の/の間の文字列を抽出
+  // URLからドメイン部分を抽出
+  // ex. https://hoge.com/foo/bar → hoge.com
   const urlToDomain = (pageUrl: string) => {
     const secondSlash = pageUrl.indexOf("/", pageUrl.indexOf("/") + 1);
     const thirdSlash = pageUrl.indexOf("/", pageUrl.indexOf("/") + 2);
