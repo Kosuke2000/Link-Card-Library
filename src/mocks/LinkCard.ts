@@ -23,7 +23,7 @@ export const mockOgpData2: OgpData = {
     "State variables might look like regular JavaScript variables that you can read and write to. However, state behaves more like a snapshot. Setting it does not change the state variable you already have, but instead triggers a re-render.",
   faviconUrl: "",
   pageUrl: "https://beta.reactjs.org/learn/state-as-a-snapshot",
-  ogImgUrl: "",
+  ogImgUrl: "https://beta.reactjs.org/logo-og.png",
 };
 
 export const mockOgpDataList = [mockOgpData, mockOgpData1, mockOgpData2];
