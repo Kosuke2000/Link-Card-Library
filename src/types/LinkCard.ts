@@ -12,6 +12,10 @@ export type LinkCard = {
   code: string;
 };
 
+export interface LinkCardViewProps {
+  ogp: OgpData;
+}
+
 export interface LinkCardProps {
   linkCard: LinkCard;
 }

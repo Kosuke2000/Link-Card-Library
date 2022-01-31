@@ -1,11 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { VFC } from "react";
 
-import { OgpData } from "@/types/LinkCard";
-
-interface LinkCardViewProps {
-  ogp: OgpData;
-}
+import { LinkCardViewProps } from "@/types/LinkCard";
 
 // Presentational Component for Desktop
 export const LinkCardViewDesktop: VFC<LinkCardViewProps> = ({ ogp }) => {

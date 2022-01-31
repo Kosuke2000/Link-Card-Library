@@ -1,11 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { VFC } from "react";
 
-import { OgpData } from "@/types/LinkCard";
-
-interface LinkCardViewProps {
-  ogp: OgpData;
-}
+import { LinkCardViewProps } from "@/types/LinkCard";
 
 export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
   const { title, description, faviconUrl, pageUrl, ogImgUrl } = ogp;
