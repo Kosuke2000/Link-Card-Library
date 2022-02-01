@@ -2,14 +2,15 @@
 
 import { VFC } from "react";
 
-import { mockOgpData } from "@/mocks/LinkCard";
 import { LinkCard, LinkCardProps } from "@/types/LinkCard";
+
+import { mockOgpData2 } from "@/mocks/LinkCard";
 
 import { LinkCardView } from "./View";
 
 export const NOTE_STYLE_LINKCARD_PROPS: LinkCard = {
   linkCardName: "Note style",
-  data: mockOgpData,
+  data: mockOgpData2,
   code: "code",
 };
 

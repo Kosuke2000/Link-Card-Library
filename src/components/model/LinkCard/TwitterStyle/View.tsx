@@ -3,7 +3,7 @@ import { VFC } from "react";
 
 import { LinkCardViewProps } from "@/types/LinkCard";
 
-import { urlToDomain } from "../UrlToDomain";
+import { urlToDomain } from "@/utils/urlToDomain";
 
 export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
   const { title, description, pageUrl, ogImgUrl } = ogp;

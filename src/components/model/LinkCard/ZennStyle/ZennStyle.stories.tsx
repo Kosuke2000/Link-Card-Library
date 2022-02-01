@@ -1,12 +1,12 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import React from "react";
 
-import { mockOgpData, mockOgpData2 } from "@/mocks/LinkCard";
+import { mockOgpData2 } from "@/mocks/LinkCard";
 
 import { LinkCardView } from "./View";
 
 export default {
-  title: "Model/LinkCard/NoteStyle",
+  title: "Model/LinkCard/ZennStyle",
   component: LinkCardView,
   argTypes: {
     backgroundColor: { control: "color" },
@@ -17,12 +17,18 @@ const Template: ComponentStory<typeof LinkCardView> = (args) => (
   <LinkCardView {...args} />
 );
 
+const MobileTemplate: ComponentStory<typeof LinkCardView> = (args) => (
+  <div className="max-w-sm">
+    <LinkCardView {...args} />
+  </div>
+);
+
 export const Default = Template.bind({});
 Default.args = {
-  ogp: mockOgpData,
+  ogp: mockOgpData2,
 };
 
-export const LongDescription = Template.bind({});
-LongDescription.args = {
+export const Mobile = MobileTemplate.bind({});
+Mobile.args = {
   ogp: mockOgpData2,
 };

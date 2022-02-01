@@ -7,7 +7,7 @@ export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
   const { title, description, faviconUrl, pageUrl, ogImgUrl } = ogp;
 
   return (
-    <article className="flex justify-between w-full h-36 rounded-xl border border-blue-100 border-solid">
+    <article className="flex justify-between w-full max-w-2xl h-36 rounded-xl border border-blue-100 border-solid">
       <div
         className={`flex flex-col justify-between  py-6  pl-8 pr-20  hover:bg-gray-100 hover:rounded-l-xl w-5/6`}
       >

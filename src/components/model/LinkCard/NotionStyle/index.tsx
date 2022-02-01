@@ -2,8 +2,9 @@
 
 import { VFC } from "react";
 
-import { mockOgpData } from "@/mocks/LinkCard";
 import { LinkCard, LinkCardProps } from "@/types/LinkCard";
+
+import { mockOgpData } from "@/mocks/LinkCard";
 
 import { LinkCardView } from "./View";
 
