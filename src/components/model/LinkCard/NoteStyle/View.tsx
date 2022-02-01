@@ -13,12 +13,14 @@ export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
   return (
     <article className="flex justify-between w-full max-w-2xl h-40 border border-gray-200 border-solid">
       <div
-        className={`flex overflow-hidden flex-col justify-between p-8 pl-5 ${w}`}
+        className={`flex overflow-hidden flex-col justify-around md:justify-between p-8 px-5 hover:bg-gray-100 ${w}`}
       >
         <h1 className="overflow-hidden max-h-12 text-xl font-medium leading-6 text-ellipsis">
           {title}
         </h1>
-        <p className="text-sm text-gray-400 truncate">{description}</p>
+        <p className="hidden text-sm text-gray-400 truncate md:block">
+          {description}
+        </p>
         <div className="flex items-center">
           {faviconUrl && <img src={faviconUrl} className="h-4" alt="" />}
           <p className={`text-sm truncate ${m}`}>{urlToDomain(pageUrl)}</p>
