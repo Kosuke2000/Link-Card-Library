@@ -13,11 +13,35 @@ export default {
   },
 } as ComponentMeta<typeof LinkCardView>;
 
-const Template: ComponentStory<typeof LinkCardView> = (args) => (
-  <LinkCardView {...args} />
+const Small: ComponentStory<typeof LinkCardView> = (args) => (
+  <div className="max-w-sm">
+    <LinkCardView {...args} />
+  </div>
 );
 
-export const Default = Template.bind({});
-Default.args = {
+const Medium: ComponentStory<typeof LinkCardView> = (args) => (
+  <div className="max-w-md">
+    <LinkCardView {...args} />
+  </div>
+);
+
+const Large: ComponentStory<typeof LinkCardView> = (args) => (
+  <div className="max-w-6xl">
+    <LinkCardView {...args} />
+  </div>
+);
+
+export const Mobile = Small.bind({});
+Mobile.args = {
+  ogp: mockOgpData,
+};
+
+export const Tablet = Medium.bind({});
+Tablet.args = {
+  ogp: mockOgpData,
+};
+
+export const Desktop = Large.bind({});
+Desktop.args = {
   ogp: mockOgpData,
 };

@@ -2,9 +2,9 @@ import { OgpData } from "@/types/LinkCard";
 
 export const mockOgpData: OgpData = {
   title: "State as a Snapshot",
-  description: "A JavaScript library for building user interfaces",
+  description: "A JavaScript library for building ",
   faviconUrl: "https://beta.reactjs.org/favicon.ico",
-  pageUrl: "https://beta.reactjs.org/learn/state-as-a-snapshot",
+  pageUrl: "https://beta.reactjs.org/learn/state-",
   ogImgUrl: "https://beta.reactjs.org/logo-og.png",
 };
 

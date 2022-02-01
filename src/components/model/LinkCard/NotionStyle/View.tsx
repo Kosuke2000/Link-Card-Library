@@ -11,7 +11,7 @@ export const LinkCardViewDesktop: VFC<LinkCardViewProps> = ({ ogp }) => {
 
   return (
     <div className="hidden md:block">
-      <article className="flex justify-between max-w-4xl h-40 rounded border border-gray-400 border-solid">
+      <article className="flex justify-between max-w-6xl h-40 rounded border border-gray-400 border-solid">
         <div
           className={`flex flex-col justify-between p-5  hover:bg-gray-100 ${w}`}
         >
