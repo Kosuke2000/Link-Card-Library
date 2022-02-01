@@ -15,7 +15,7 @@ export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
         className="object-cover w-full h-48 rounded-t-xl md:h-60"
         alt=""
       />
-      <div className="overflow-hidden p-3 w-full max-h-32 ">
+      <div className="overflow-hidden p-3 w-full max-h-32 hover:bg-gray-100">
         <p className="text-xs text-gray-500">{urlToDomain(pageUrl)}</p>
         <h2 className=" truncate">{title}</h2>
         <p className="overflow-hidden max-h-10 text-base leading-5 text-gray-500 ">
