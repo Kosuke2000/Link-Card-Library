@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import React from "react";
 
-import { mockOgpData2 } from "@/mocks/LinkCard";
+import { mockOgpData, mockOgpData2 } from "@/mocks/LinkCard";
 
 import { LinkCardView } from "./View";
 
@@ -19,5 +19,10 @@ const Template: ComponentStory<typeof LinkCardView> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
+  ogp: mockOgpData,
+};
+
+export const LongDescription = Template.bind({});
+LongDescription.args = {
   ogp: mockOgpData2,
 };

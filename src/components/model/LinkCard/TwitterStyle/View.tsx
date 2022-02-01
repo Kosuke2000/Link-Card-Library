@@ -17,8 +17,10 @@ export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
       />
       <div className="p-3 w-full ">
         <p className="text-gray-500">{urlToDomain(pageUrl)}</p>
-        <h2>{title}</h2>
-        <p className="text-gray-500 truncate">{description}</p>
+        <h2 className="truncate">{title}</h2>
+        <p className="overflow-hidden h-12 text-base text-gray-500 ">
+          {description}
+        </p>
       </div>
     </article>
   );
