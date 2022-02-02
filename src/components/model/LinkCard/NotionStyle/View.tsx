@@ -11,19 +11,6 @@ export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
 
   return (
     <article className="flex justify-between w-full max-w-3xl h-32 rounded border border-gray-400 border-solid">
-      {/* <div
-        className="flex overflow-hidden flex-col justify-between p-5 py-4"
-        style={{ width: `calc(100%-256px)` }}
-      >
-        <h3 className="text-lg truncate">{title}</h3>
-        <p className="overflow-hidden h-8 text-sm leading-4 text-gray-500">
-          {description}
-        </p>
-        <div className="flex items-center">
-          {faviconUrl && <img src={faviconUrl} className="h-5" alt="" />}
-          <p className={`text-sm truncate ${ml}`}>{pageUrl}</p>
-        </div>
-      </div> */}
       <div
         className={`flex overflow-hidden flex-col justify-between p-5 py-4 ${w}`}
       >
