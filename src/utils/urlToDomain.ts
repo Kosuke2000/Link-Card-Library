@@ -18,3 +18,8 @@ export const removeScheme = (pageUrl: string) => {
 
   return pageUrl.substring(secondSlash + 1);
 };
+
+export const urlToDomain = (pageUral: string) => {
+  const u = removePath(pageUral);
+  return removeScheme(u);
+};
