@@ -10,9 +10,9 @@ export const mockOgpData: OgpData = {
 
 export const mockOgpData1: OgpData = {
   title:
-    "State variables might look like regular JavaScript variables that you can read and write to. However, state behaves more like a snapshot. Setting it does not change the state variable you already have, but instead triggers a re-render.",
+    "State 日本語のにvariables might look like regular JavaScript variables that you can read and write to. However, state behaves more like a snapshot. Setting it does not change the state variable you already have, but instead triggers a re-render.",
   description:
-    "State variables might look like regular JavaScript variables that you can read and write to. However, state behaves more like a snapshot. Setting it does not change the state variable you already have, but instead triggers a re-render.",
+    "State 日本語のにvariables might look like regular JavaScript variables that you can read and write to. However, state behaves more like a snapshot. Setting it does not change the state variable you already have, but instead triggers a re-render.",
   faviconUrl: "https://beta.reactjs.org/favicon.ico",
   pageUrl: "https://beta.reactjs.org/learn/state-as-a-snapshot",
   ogImgUrl: "",
