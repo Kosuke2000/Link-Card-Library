@@ -8,10 +8,10 @@ export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
   const m = faviconUrl ? "ml-2" : "";
 
   return (
-    <article className="flex justify-between w-full max-w-3xl h-36 rounded-xl border border-blue-100 border-solid">
+    <article className="flex justify-between w-full max-w-3xl h-32 rounded-xl border border-gray-200 border-solid">
       <div
         className="flex flex-col justify-between p-5 hover:bg-gray-100"
-        style={{ width: `calc(100% - 9rem)` }}
+        style={{ width: `calc(100% - 8rem)` }}
       >
         <h3 className="text-xl truncate">{title}</h3>
         <p className="overflow-hidden h-10 text-sm text-gray-400">
@@ -25,7 +25,7 @@ export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
       {ogImgUrl && (
         <img
           src={ogImgUrl}
-          className="object-cover w-36 h-36 rounded-r-xl"
+          className="object-cover w-32 h-32 rounded-r-xl"
           alt=""
         />
       )}

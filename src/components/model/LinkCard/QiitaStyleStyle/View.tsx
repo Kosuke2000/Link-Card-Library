@@ -9,7 +9,7 @@ export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
   const { title, pageUrl, ogImgUrl } = ogp;
 
   return (
-    <article className="flex justify-between w-full max-w-4xl h-32 border border-blue-100 border-solid">
+    <article className="flex justify-between w-full max-w-3xl h-32 border border-gray-200 border-solid">
       <div
         className="flex flex-col justify-center p-5 max-h-32"
         style={{ width: `calc(100% - 128px)` }}
