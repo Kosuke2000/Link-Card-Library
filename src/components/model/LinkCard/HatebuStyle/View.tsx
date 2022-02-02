@@ -8,10 +8,13 @@ import { removePath, removeScheme } from "@/utils/urlToDomain";
 export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
   const { title, description, faviconUrl, pageUrl, ogImgUrl } = ogp;
   const m = faviconUrl ? "ml-1" : "";
+  const pr = ogImgUrl ? "pr-2" : "";
 
   return (
     <article className="flex justify-between p-3 w-full max-w-lg h-36 rounded-sm border border-gray-200 border-solid">
-      <div className="flex overflow-hidden flex-col justify-between pr-2 w-full">
+      <div
+        className={`flex overflow-hidden flex-col justify-between ${pr} w-full`}
+      >
         <div className="overflow-hidden max-h-28">
           <h3 className="overflow-hidden mb-1 max-h-12 text-xl font-medium leading-6 text-ellipsis">
             {title}
