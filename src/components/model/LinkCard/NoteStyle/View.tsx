@@ -3,7 +3,7 @@ import { VFC } from "react";
 
 import { LinkCardViewProps } from "@/types/LinkCard";
 
-import { urlToDomain } from "@/utils/urlToDomain";
+import { removePath, removeScheme } from "@/utils/urlToDomain";
 
 export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
   const { title, description, faviconUrl, pageUrl, ogImgUrl } = ogp;
@@ -23,7 +23,9 @@ export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
         </p>
         <div className="flex items-center">
           {faviconUrl && <img src={faviconUrl} className="h-4" alt="" />}
-          <p className={`text-sm truncate ${m}`}>{urlToDomain(pageUrl)}</p>
+          <p className={`text-sm truncate ${m}`}>
+            {removeScheme(removePath(pageUrl))}
+          </p>
         </div>
       </div>
       <div className="min-w-max md:w-2/5">
