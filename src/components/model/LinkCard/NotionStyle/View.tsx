@@ -10,7 +10,7 @@ export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
   const ml = faviconUrl ? "ml-2" : "";
 
   return (
-    <article className="flex justify-between w-full max-w-3xl h-32 rounded border border-gray-400 border-solid">
+    <article className="flex justify-between w-full max-w-3xl h-32 rounded border border-gray-300 border-solid">
       <div
         className={`flex overflow-hidden flex-col justify-between p-5 py-4 ${w}`}
       >

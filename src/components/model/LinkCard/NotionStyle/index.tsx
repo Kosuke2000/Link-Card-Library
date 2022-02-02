@@ -17,7 +17,7 @@ export const NOTION_STYLE_LINKCARD_PROPS: LinkCard = {
 export const NotionStyleLinkCard: VFC<LinkCardProps> = ({ linkCard }) => {
   const { linkCardName, data, code } = linkCard;
   return (
-    <div className="flex flex-col items-center w-full border-2">
+    <div className="flex flex-col items-center w-full ">
       <h1>{linkCardName}</h1>
       <LinkCardView ogp={data} />
       <p>ここにコードが入ります。{code}</p>

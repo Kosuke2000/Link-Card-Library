@@ -6,7 +6,7 @@ import { mockOgpData, mockOgpData2 } from "@/mocks/LinkCard";
 import { LinkCardView } from "./View";
 
 export default {
-  title: "Model/LinkCard/ZennStyle",
+  title: "Model/LinkCard/HatebuStyle",
   component: LinkCardView,
   argTypes: {
     backgroundColor: { control: "color" },

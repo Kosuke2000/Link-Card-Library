@@ -8,9 +8,9 @@ export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
   const m = faviconUrl ? "ml-2" : "";
 
   return (
-    <article className="flex justify-between w-full max-w-3xl h-32 rounded-xl border border-gray-200 border-solid">
+    <article className="flex justify-between w-full max-w-3xl h-32 rounded-xl border border-blue-100 border-solid">
       <div
-        className="flex flex-col justify-between p-5 hover:bg-gray-100"
+        className="flex flex-col justify-between p-5 hover:bg-gray-100 rounded-l-xl"
         style={{ width: `calc(100% - 8rem)` }}
       >
         <h3 className="text-xl truncate">{title}</h3>
