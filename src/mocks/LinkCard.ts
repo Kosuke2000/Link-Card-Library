@@ -14,7 +14,7 @@ export const mockOgpData1: OgpData = {
   description: "A JavaScript library for building user interfaces",
   faviconUrl: "https://beta.reactjs.org/favicon.ico",
   pageUrl: "https://beta.reactjs.org/learn/state-as-a-snapshot",
-  ogImgUrl: "https://beta.reactjs.org/logo-og.png",
+  ogImgUrl: "",
 };
 
 export const mockOgpData2: OgpData = {

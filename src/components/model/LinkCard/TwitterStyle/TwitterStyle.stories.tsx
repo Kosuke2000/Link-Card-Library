@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import React from "react";
 
-import { mockOgpData, mockOgpData2 } from "@/mocks/LinkCard";
+import { mockOgpData, mockOgpData1, mockOgpData2 } from "@/mocks/LinkCard";
 
 import { LinkCardView } from "./View";
 
@@ -25,4 +25,9 @@ Default.args = {
 export const LongDescription = Template.bind({});
 LongDescription.args = {
   ogp: mockOgpData2,
+};
+
+export const NoOgImgUrl = Template.bind({});
+NoOgImgUrl.args = {
+  ogp: mockOgpData1,
 };
