@@ -4,7 +4,8 @@ import { LinkCard, LinkCardProps } from "@/types/LinkCard";
 
 import { mockOgpData } from "@/mocks/LinkCard";
 
-import { LinkCardView } from "./View";
+import { LinkCardContainer } from "../LinkCardContainer";
+import { ZennStyleLinkCardView } from "./View";
 
 export const ZENN_STYLE_LINKCARD_PROPS: LinkCard = {
   linkCardName: "Zenn style",
@@ -15,10 +16,8 @@ export const ZENN_STYLE_LINKCARD_PROPS: LinkCard = {
 export const ZennStyleLinkCard: VFC<LinkCardProps> = ({ linkCard }) => {
   const { linkCardName, data, code } = linkCard;
   return (
-    <div className="flex flex-col items-center w-full ">
-      <h1>{linkCardName}</h1>
-      <LinkCardView ogp={data} />
-      <p>ここにコードが入ります。{code}</p>
-    </div>
+    <LinkCardContainer linkCardName={linkCardName} code={code}>
+      <ZennStyleLinkCardView ogp={data} />
+    </LinkCardContainer>
   );
 };

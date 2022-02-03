@@ -5,7 +5,7 @@ import { LinkCardViewProps } from "@/types/LinkCard";
 
 import { urlToDomain } from "@/utils/urlToDomain";
 
-export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
+export const HatebuStyleLinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
   const { title, description, faviconUrl, pageUrl, ogImgUrl } = ogp;
   const m = faviconUrl ? "ml-1" : "";
   const pr = ogImgUrl ? "pr-2" : "";

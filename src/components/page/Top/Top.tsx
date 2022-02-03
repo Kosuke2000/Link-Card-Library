@@ -30,11 +30,11 @@ export const Top: NextPage = () => {
     <main className="flex flex-col justify-center items-center p-4 w-screen">
       <div>Hello world</div>
       <NotionStyleLinkCard linkCard={NOTION_STYLE_LINKCARD_PROPS} />
-      <ZennStyleLinkCard linkCard={ZENN_STYLE_LINKCARD_PROPS} />
-      <TwitterStyleLinkCard linkCard={TWITTER_STYLE_LINKCARD_PROPS} />
-      <NoteStyleLinkCard linkCard={NOTE_STYLE_LINKCARD_PROPS} />
       <QiitaStyleLinkCard linkCard={QIITA_STYLE_LINKCARD_PROPS} />
+      <ZennStyleLinkCard linkCard={ZENN_STYLE_LINKCARD_PROPS} />
+      <NoteStyleLinkCard linkCard={NOTE_STYLE_LINKCARD_PROPS} />
       <HatebuStyleLinkCard linkCard={HATEBU_STYLE_LINKCARD_PROPS} />
+      <TwitterStyleLinkCard linkCard={TWITTER_STYLE_LINKCARD_PROPS} />
       {/* <UserTable users={mockUserList} /> */}
     </main>
   );

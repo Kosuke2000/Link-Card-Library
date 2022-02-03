@@ -3,18 +3,18 @@ import React from "react";
 
 import { mockOgpData, mockOgpData1, mockOgpData2 } from "@/mocks/LinkCard";
 
-import { LinkCardView } from "./View";
+import { NotionStyleLinkCardView } from "./View";
 
 export default {
   title: "Model/LinkCard/NotionStyle",
-  component: LinkCardView,
+  component: NotionStyleLinkCardView,
   argTypes: {
     backgroundColor: { control: "color" },
   },
-} as ComponentMeta<typeof LinkCardView>;
+} as ComponentMeta<typeof NotionStyleLinkCardView>;
 
-const Template: ComponentStory<typeof LinkCardView> = (args) => (
-  <LinkCardView {...args} />
+const Template: ComponentStory<typeof NotionStyleLinkCardView> = (args) => (
+  <NotionStyleLinkCardView {...args} />
 );
 
 export const Default = Template.bind({});

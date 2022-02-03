@@ -3,18 +3,18 @@ import React from "react";
 
 import { mockOgpData, mockOgpData1, mockOgpData2 } from "@/mocks/LinkCard";
 
-import { LinkCardView } from "./View";
+import { ZennStyleLinkCardView } from "./View";
 
 export default {
   title: "Model/LinkCard/ZennStyle",
-  component: LinkCardView,
+  component: ZennStyleLinkCardView,
   argTypes: {
     backgroundColor: { control: "color" },
   },
-} as ComponentMeta<typeof LinkCardView>;
+} as ComponentMeta<typeof ZennStyleLinkCardView>;
 
-const Template: ComponentStory<typeof LinkCardView> = (args) => (
-  <LinkCardView {...args} />
+const Template: ComponentStory<typeof ZennStyleLinkCardView> = (args) => (
+  <ZennStyleLinkCardView {...args} />
 );
 
 export const Default = Template.bind({});

@@ -4,13 +4,13 @@ import { VFC } from "react";
 import { LinkCardViewProps } from "@/types/LinkCard";
 
 // Presentational Component for Desktop
-export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
+export const NotionStyleLinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
   const { title, description, faviconUrl, pageUrl, ogImgUrl } = ogp;
   const w = ogImgUrl ? "w-full sm:w-3/5" : "w-full";
   const ml = faviconUrl ? "ml-2" : "";
 
   return (
-    <article className="flex justify-between w-full max-w-2xl h-32 rounded border border-gray-300 border-solid">
+    <article className="flex justify-between w-full max-w-3xl h-32 rounded border border-gray-300 border-solid">
       <div
         className={`flex overflow-hidden flex-col justify-between p-5 py-4 ${w}`}
       >

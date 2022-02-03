@@ -6,7 +6,8 @@ import { LinkCard, LinkCardProps } from "@/types/LinkCard";
 
 import { mockOgpData2 } from "@/mocks/LinkCard";
 
-import { LinkCardView } from "./View";
+import { LinkCardContainer } from "../LinkCardContainer";
+import { NoteStyleLinkCardView } from "./View";
 
 export const NOTE_STYLE_LINKCARD_PROPS: LinkCard = {
   linkCardName: "Note style",
@@ -17,10 +18,8 @@ export const NOTE_STYLE_LINKCARD_PROPS: LinkCard = {
 export const NoteStyleLinkCard: VFC<LinkCardProps> = ({ linkCard }) => {
   const { linkCardName, data, code } = linkCard;
   return (
-    <div className="flex flex-col items-center w-full">
-      <h1>{linkCardName}</h1>
-      <LinkCardView ogp={data} />
-      <p>ここにコードが入ります。{code}</p>
-    </div>
+    <LinkCardContainer linkCardName={linkCardName} code={code}>
+      <NoteStyleLinkCardView ogp={data} />
+    </LinkCardContainer>
   );
 };

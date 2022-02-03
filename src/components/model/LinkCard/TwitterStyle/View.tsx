@@ -5,7 +5,7 @@ import { LinkCardViewProps } from "@/types/LinkCard";
 
 import { urlToDomain } from "@/utils/urlToDomain";
 
-export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
+export const TwitterStyleLinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
   const { title, description, pageUrl, ogImgUrl } = ogp;
 
   return (

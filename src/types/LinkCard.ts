@@ -12,6 +12,8 @@ export type LinkCard = {
   code: string;
 };
 
+export type LinkCardContainerProps = Pick<LinkCard, "linkCardName" | "code">;
+
 export interface LinkCardViewProps {
   ogp: OgpData;
 }

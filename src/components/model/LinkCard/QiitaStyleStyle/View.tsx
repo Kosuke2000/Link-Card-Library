@@ -5,7 +5,7 @@ import { LinkCardViewProps } from "@/types/LinkCard";
 
 import { removePath } from "@/utils/urlToDomain";
 
-export const LinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
+export const QiitaStyleLinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
   const { title, pageUrl, ogImgUrl } = ogp;
 
   return (

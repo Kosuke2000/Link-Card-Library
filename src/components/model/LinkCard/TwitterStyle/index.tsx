@@ -6,7 +6,8 @@ import { LinkCard, LinkCardProps } from "@/types/LinkCard";
 
 import { mockOgpData2 } from "@/mocks/LinkCard";
 
-import { LinkCardView } from "./View";
+import { LinkCardContainer } from "../LinkCardContainer";
+import { TwitterStyleLinkCardView } from "./View";
 
 export const TWITTER_STYLE_LINKCARD_PROPS: LinkCard = {
   linkCardName: "Twitter style",
@@ -17,10 +18,8 @@ export const TWITTER_STYLE_LINKCARD_PROPS: LinkCard = {
 export const TwitterStyleLinkCard: VFC<LinkCardProps> = ({ linkCard }) => {
   const { linkCardName, data, code } = linkCard;
   return (
-    <div className="flex flex-col items-center w-full">
-      <h1>{linkCardName}</h1>
-      <LinkCardView ogp={data} />
-      <p>ここにコードが入ります。{code}</p>
-    </div>
+    <LinkCardContainer linkCardName={linkCardName} code={code}>
+      <TwitterStyleLinkCardView ogp={data} />
+    </LinkCardContainer>
   );
 };
