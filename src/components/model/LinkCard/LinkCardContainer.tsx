@@ -22,8 +22,11 @@ export const LinkCardContainer: FC<LinkCardContainerProps> = ({
   return (
     <>
       <div className="flex flex-col items-center p-4 w-full">
-        <h1 className="p-4 text-3xl font-bold">{linkCardName}</h1>
-        <div className="flex justify-center w-full" onClick={open}>
+        <h1 className="p-4 text-3xl font-bold text-white">{linkCardName}</h1>
+        <div
+          className="flex justify-center py-12 w-full max-w-4xl bg-white rounded-2xl"
+          onClick={open}
+        >
           {children}
         </div>
       </div>

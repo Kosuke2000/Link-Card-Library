@@ -27,7 +27,7 @@ import type { NextPage } from "next";
 
 export const Top: NextPage = () => {
   return (
-    <main className="flex flex-col justify-center items-center p-4 w-screen">
+    <main className="flex flex-col justify-center items-center p-4 w-screen bg-slate-400">
       <div>Hello world</div>
       <NotionStyleLinkCard linkCard={NOTION_STYLE_LINKCARD_PROPS} />
       <QiitaStyleLinkCard linkCard={QIITA_STYLE_LINKCARD_PROPS} />
