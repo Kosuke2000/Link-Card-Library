@@ -10,7 +10,7 @@ import { LinkCardContainer } from "../LinkCardContainer";
 import { QiitaStyleLinkCardView } from "./View";
 
 export const QIITA_STYLE_LINKCARD_PROPS: LinkCard = {
-  linkCardName: "QiitaStyle style",
+  linkCardName: "Qiita style",
   data: mockOgpData,
   code: "code",
 };
