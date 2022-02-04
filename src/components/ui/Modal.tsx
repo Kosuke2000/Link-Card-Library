@@ -3,6 +3,8 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
+import { Spacer } from "./Spacer";
+
 interface ModalProps {
   code: string;
   close: () => void;
@@ -23,7 +25,7 @@ export const Modal: VFC<ModalProps> = ({ code, close }) => {
         <SyntaxHighlighter language="typescript" style={docco}>
           {code}
         </SyntaxHighlighter>
-        {/* <Spacer size={32} /> */}
+        <Spacer size={8} />
         <div className="flex justify-around w-full">
           <button
             onClick={close}
@@ -36,13 +38,6 @@ export const Modal: VFC<ModalProps> = ({ code, close }) => {
               Copy to clipboard
             </button>
           </CopyToClipboard>
-
-          {/* <button
-            onClick={() => copy(code)}
-            className="py-2 px-4 font-bold text-white dark:text-slate-700 bg-blue-500 hover:bg-blue-700 dark:bg-yellow-300 dark:hover:bg-yellow-500 rounded"
-          >
-            Copy to clipbord
-          </button> */}
         </div>
       </div>
     </div>
