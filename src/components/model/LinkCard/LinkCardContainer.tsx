@@ -30,7 +30,7 @@ export const LinkCardContainer: FC<LinkCardContainerProps> = ({
           {children}
         </div>
       </div>
-      {isModalOpen && <Modal code={code} close={close} />}
+      {isModalOpen && <Modal title={linkCardName} code={code} close={close} />}
     </>
   );
 };
