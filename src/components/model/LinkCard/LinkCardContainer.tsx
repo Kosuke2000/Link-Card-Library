@@ -1,6 +1,12 @@
-import { FC, useState } from "react";
+import { FC, VFC } from "react";
 
-import { LinkCardContainerProps } from "@/types/LinkCard";
+import { useToggle } from "@/hooks/useToggle";
+
+import {
+  LinkCardContainerProps,
+  LinkCardViewProps,
+  OgpData,
+} from "@/types/LinkCard";
 
 import { Modal } from "@/components/ui/Modal";
 
@@ -9,15 +15,7 @@ export const LinkCardContainer: FC<LinkCardContainerProps> = ({
   linkCardName,
   code,
 }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const open = () => {
-    setIsModalOpen(true);
-  };
-
-  const close = () => {
-    setIsModalOpen(false);
-  };
+  const [isModalOpen, open, close] = useToggle();
 
   return (
     <>
@@ -27,10 +25,32 @@ export const LinkCardContainer: FC<LinkCardContainerProps> = ({
           className="flex justify-center py-12 w-full max-w-4xl bg-white rounded-2xl"
           onClick={open}
         >
-          {children}
+          <>
+            {children}
+            {isModalOpen && (
+              <Modal title={linkCardName} code={code} close={close} />
+            )}
+          </>
         </div>
       </div>
-      {isModalOpen && <Modal title={linkCardName} code={code} close={close} />}
     </>
   );
 };
+
+export const LinkCardContainerC: VFC<O> = ({ View, name, code, mockdata }) => {
+  const [isModalOpen, open, close] = useToggle();
+
+  return (
+    <>
+      <View showCode={open} ogp={mockdata} />
+      {isModalOpen && <Modal title={name} code={code} close={close} />}
+    </>
+  );
+};
+
+interface O {
+  View: VFC<LinkCardViewProps>;
+  name: string;
+  code: string;
+  mockdata: OgpData;
+}

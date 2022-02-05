@@ -5,11 +5,17 @@ import { LinkCardViewProps } from "@/types/LinkCard";
 
 import { removePath } from "@/utils/urlToDomain";
 
-export const QiitaStyleLinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
+export const QiitaStyleLinkCardView: VFC<LinkCardViewProps> = ({
+  ogp,
+  showCode,
+}) => {
   const { title, pageUrl, ogImgUrl } = ogp;
 
   return (
-    <article className="flex justify-between w-full max-w-3xl h-32 border border-gray-200 border-solid">
+    <article
+      onClick={showCode}
+      className="flex justify-between w-full max-w-3xl h-32 border border-gray-200 border-solid"
+    >
       <div className="flex overflow-hidden flex-col justify-center p-5">
         <h3 className="overflow-hidden mb-1 max-h-12 text-lg font-medium leading-6">
           {title}

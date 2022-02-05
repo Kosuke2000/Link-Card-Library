@@ -8,7 +8,6 @@ export const useMocks = () => {
   type MockdataType = typeof STORE[number]["mockdata"];
 
   type Reducertype = typeof reducer;
-  type Dispatch<A> = (value: A) => void;
 
   const STORE = [
     { mockdata: mockOgpDataList[0] },
@@ -21,6 +20,10 @@ export const useMocks = () => {
     { type: "longtitle" },
     { type: "nofav" },
   ] as const;
+
+  const ActionStoreMap = ACTION.map((action, i) => {
+    return { action: action, state: STORE[i] };
+  });
 
   const reducer = (state: State, action: Action) => {
     switch (action.type) {
@@ -48,13 +51,30 @@ export const useMocks = () => {
 
   const Switcher: VFC = () => {
     return (
-      <>
-        {ACTION.map((action) => (
-          <button key={action.type} onClick={() => dispatch(action)}>
-            {action.type}
-          </button>
-        ))}
-      </>
+      <div className="flex">
+        {ACTION.map((action) => {
+          // ActionStoreMapから、現在のactionと対応するstateを取ってくる
+          const currentState = ActionStoreMap.find(
+            (item) => item.action === action
+          )?.state.mockdata;
+
+          // そのstateがmockdataと一致するか見る
+          const isCurrent = currentState === mockdata;
+          // 一致したら暗い色、それ以外は明るい色
+          const active = "bg-slate-400 text-white font-bold";
+          const bgColor = isCurrent ? active : "bg-slate-200";
+
+          return (
+            <button
+              className={`p-2 mx-px ${bgColor}`}
+              key={action.type}
+              onClick={() => dispatch(action)}
+            >
+              {action.type}
+            </button>
+          );
+        })}
+      </div>
     );
   };
 

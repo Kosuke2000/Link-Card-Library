@@ -10,7 +10,7 @@ import {
   NotionStyleLinkCard,
   NOTION_STYLE_LINKCARD_PROPS,
 } from "@/components/model/LinkCard/NotionStyle";
-import { QiitaStyleLinkCard } from "@/components/model/LinkCard/QiitaStyleStyle";
+import { QittaStyle } from "@/components/model/LinkCard/QiitaStyleStyle";
 import {
   TwitterStyleLinkCard,
   TWITTER_STYLE_LINKCARD_PROPS,
@@ -27,7 +27,7 @@ export const Top: NextPage = () => {
     <main className="flex flex-col justify-center items-center p-4 w-screen bg-slate-400 ">
       <h1 className="p-8 text-6xl font-semibold">Link Card Library</h1>
       <NotionStyleLinkCard linkCard={NOTION_STYLE_LINKCARD_PROPS} />
-      <QiitaStyleLinkCard />
+      <QittaStyle />
       <ZennStyleLinkCard linkCard={ZENN_STYLE_LINKCARD_PROPS} />
       <NoteStyleLinkCard linkCard={NOTE_STYLE_LINKCARD_PROPS} />
       <HatebuStyleLinkCard linkCard={HATEBU_STYLE_LINKCARD_PROPS} />
