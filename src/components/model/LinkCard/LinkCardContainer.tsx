@@ -1,14 +1,12 @@
 import { FC, VFC } from "react";
 
+import { useMocks } from "@/hooks/useMocks";
 import { useToggle } from "@/hooks/useToggle";
 
-import {
-  LinkCardContainerProps,
-  LinkCardViewProps,
-  OgpData,
-} from "@/types/LinkCard";
+import { LinkCardContainerProps, LinkCardViewProps } from "@/types/LinkCard";
 
 import { Modal } from "@/components/ui/Modal";
+import { Spacer } from "@/components/ui/Spacer";
 
 export const LinkCardContainer: FC<LinkCardContainerProps> = ({
   children,
@@ -37,20 +35,25 @@ export const LinkCardContainer: FC<LinkCardContainerProps> = ({
   );
 };
 
-export const LinkCardContainerC: VFC<O> = ({ View, name, code, mockdata }) => {
+interface O {
+  name: string;
+  View: VFC<LinkCardViewProps>;
+  code: string;
+}
+
+export const LinkCardContainerC: VFC<O> = ({ name, View, code }) => {
+  const [{ mockdata }, Switcher] = useMocks();
   const [isModalOpen, open, close] = useToggle();
 
   return (
-    <>
-      <View showCode={open} ogp={mockdata} />
-      {isModalOpen && <Modal title={name} code={code} close={close} />}
-    </>
+    <div className="flex flex-col items-center w-full">
+      <h1 className="p-4 text-3xl font-bold text-white">{name}</h1>
+      <div className="flex flex-col justify-between items-center py-12 w-full max-w-4xl bg-white rounded-2xl">
+        <Switcher />
+        <Spacer size={8} />
+        <View showCode={open} ogp={mockdata} />
+        {isModalOpen && <Modal title={name} code={code} close={close} />}
+      </div>
+    </div>
   );
 };
-
-interface O {
-  View: VFC<LinkCardViewProps>;
-  name: string;
-  code: string;
-  mockdata: OgpData;
-}
