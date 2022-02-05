@@ -22,7 +22,14 @@ export const Modal: VFC<ModalProps> = ({ title, code, close }) => {
     setTimeout(() => {
       close();
       setCopied(false);
-    }, 1000);
+    }, 500);
+  };
+
+  const onCancel = () => {
+    setU("animate-fade-out");
+    setTimeout(() => {
+      close();
+    }, 500);
   };
 
   return (
@@ -43,7 +50,7 @@ export const Modal: VFC<ModalProps> = ({ title, code, close }) => {
         <Spacer size={8} />
         <div className="flex justify-between w-full max-w-md">
           <button
-            onClick={close}
+            onClick={onCancel}
             className="py-2 px-4 font-semibold text-blue-700 hover:text-white dark:text-white bg-transparent hover:bg-blue-500 dark:hover:bg-slate-800 rounded border border-blue-500 hover:border-transparent dark:border-yellow-300 "
           >
             Cancel
