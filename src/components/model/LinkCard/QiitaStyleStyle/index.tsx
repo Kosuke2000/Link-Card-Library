@@ -1,25 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
 
-import { VFC } from "react";
-
-import { LinkCard, LinkCardProps } from "@/types/LinkCard";
-
-import { mockOgpData } from "@/mocks/LinkCard";
+import { useMocks } from "@/hooks/useMocks";
 
 import { LinkCardContainer } from "../LinkCardContainer";
 import { QiitaStyleLinkCardView } from "./View";
 
-export const QIITA_STYLE_LINKCARD_PROPS: LinkCard = {
-  linkCardName: "Qiita style",
-  data: mockOgpData,
-  code: "code",
-};
+export const QiitaStyleLinkCard = () => {
+  const [{ mockdata }, Switcher] = useMocks();
 
-export const QiitaStyleLinkCard: VFC<LinkCardProps> = ({ linkCard }) => {
-  const { linkCardName, data, code } = linkCard;
   return (
-    <LinkCardContainer linkCardName={linkCardName} code={code}>
-      <QiitaStyleLinkCardView ogp={data} />
-    </LinkCardContainer>
+    <>
+      <LinkCardContainer linkCardName="Qiita style" code={QIITA_STYLE_CODE}>
+        <Switcher />
+        <QiitaStyleLinkCardView ogp={mockdata} />
+      </LinkCardContainer>
+    </>
   );
 };
+
+const QIITA_STYLE_CODE = ``;
