@@ -1,13 +1,12 @@
 import { BsQuestionCircleFill } from "react-icons/bs";
 
+import { Desc, useDesc } from "@/components/model/LinkCard/descModal";
 import { HatebuStyle } from "@/components/model/LinkCard/HatebuStyle";
 import { NoteStyle } from "@/components/model/LinkCard/NoteStyle";
 import { NotionStyle } from "@/components/model/LinkCard/NotionStyle";
 import { QittaStyle } from "@/components/model/LinkCard/QiitaStyleStyle";
 import { TwitterStyle } from "@/components/model/LinkCard/TwitterStyle";
 import { ZennStyle } from "@/components/model/LinkCard/ZennStyle";
-
-import { Desc, useDesc } from "@/components/descModal";
 
 import type { NextPage } from "next";
 
