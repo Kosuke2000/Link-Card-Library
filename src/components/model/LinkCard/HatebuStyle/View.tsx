@@ -5,13 +5,19 @@ import { LinkCardViewProps } from "@/types/LinkCard";
 
 import { urlToDomain } from "@/utils/urlToDomain";
 
-export const HatebuStyleLinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
+export const HatebuStyleLinkCardView: VFC<LinkCardViewProps> = ({
+  ogp,
+  showCode,
+}) => {
   const { title, description, faviconUrl, pageUrl, ogImgUrl } = ogp;
   const m = faviconUrl ? "ml-1" : "";
   const pr = ogImgUrl ? "pr-2" : "";
 
   return (
-    <article className="flex justify-between p-3 w-full max-w-lg h-36 rounded-sm border border-gray-200 border-solid">
+    <article
+      onClick={showCode}
+      className="flex justify-between p-3 w-full max-w-lg h-36 rounded-sm border border-gray-200 border-solid"
+    >
       <div
         className={`flex overflow-hidden flex-col justify-between ${pr} w-full`}
       >

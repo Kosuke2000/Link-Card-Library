@@ -5,13 +5,19 @@ import { LinkCardViewProps } from "@/types/LinkCard";
 
 import { urlToDomain } from "@/utils/urlToDomain";
 
-export const ZennStyleLinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
+export const ZennStyleLinkCardView: VFC<LinkCardViewProps> = ({
+  ogp,
+  showCode,
+}) => {
   const { title, description, faviconUrl, pageUrl, ogImgUrl } = ogp;
   const m = faviconUrl ? "ml-2" : "";
   const wl = ogImgUrl ? `calc(100% - 8rem)` : "100%";
 
   return (
-    <article className="flex justify-between w-full max-w-3xl h-32 rounded-lg border border-blue-100 border-solid">
+    <article
+      onClick={showCode}
+      className="flex justify-between w-full max-w-3xl h-32 rounded-lg border border-blue-100 border-solid"
+    >
       <div
         className="flex flex-col justify-around p-5 w-1/6 hover:bg-blue-50 rounded-l-lg hover:rounded-l-lg"
         style={{ width: wl }}

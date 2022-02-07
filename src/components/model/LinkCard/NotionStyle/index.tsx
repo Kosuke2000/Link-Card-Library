@@ -2,24 +2,18 @@
 
 import { VFC } from "react";
 
-import { LinkCard } from "@/types/LinkCard";
-import { LinkCardProps } from "@/types/LinkCard";
-
-import { mockOgpData } from "@/mocks/LinkCard";
-
-import { LinkCardContainer } from "../LinkCardContainer";
+import { LinkCardContainerC } from "../LinkCardContainer";
 import { NotionStyleLinkCardView } from "./View";
 
-export const NotionStyleLinkCard: VFC<LinkCardProps> = ({ linkCard }) => {
-  const { linkCardName, data, code } = linkCard;
-  return (
-    <LinkCardContainer linkCardName={linkCardName} code={code}>
-      <NotionStyleLinkCardView ogp={data} />
-    </LinkCardContainer>
-  );
-};
+export const NotionStyle: VFC = () => (
+  <LinkCardContainerC
+    name="Notion Style"
+    View={NotionStyleLinkCardView}
+    code={NOTION_STYLE_CODE}
+  />
+);
 
-const CODE = `export const NotionStyleLinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
+const NOTION_STYLE_CODE = `export const NotionStyleLinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
   const { title, description, faviconUrl, pageUrl, ogImgUrl } = ogp;
   const w = ogImgUrl ? "w-full sm:w-3/5" : "w-full";
   const ml = faviconUrl ? "ml-2" : "";
@@ -47,9 +41,3 @@ const CODE = `export const NotionStyleLinkCardView: VFC<LinkCardViewProps> = ({ 
   );
 };
 `;
-
-export const NOTION_STYLE_LINKCARD_PROPS: LinkCard = {
-  linkCardName: "Notion style",
-  data: mockOgpData,
-  code: CODE,
-};

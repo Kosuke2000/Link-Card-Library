@@ -1,23 +1,14 @@
 import { VFC } from "react";
 
-import { LinkCard, LinkCardProps } from "@/types/LinkCard";
-
-import { mockOgpData } from "@/mocks/LinkCard";
-
-import { LinkCardContainer } from "../LinkCardContainer";
+import { LinkCardContainerC } from "../LinkCardContainer";
 import { ZennStyleLinkCardView } from "./View";
 
-export const ZENN_STYLE_LINKCARD_PROPS: LinkCard = {
-  linkCardName: "Zenn style",
-  data: mockOgpData,
-  code: "code",
-};
+const ZENN_STYLE_CODE = ``;
 
-export const ZennStyleLinkCard: VFC<LinkCardProps> = ({ linkCard }) => {
-  const { linkCardName, data, code } = linkCard;
-  return (
-    <LinkCardContainer linkCardName={linkCardName} code={code}>
-      <ZennStyleLinkCardView ogp={data} />
-    </LinkCardContainer>
-  );
-};
+export const ZennStyle: VFC = () => (
+  <LinkCardContainerC
+    name="Zeen Style"
+    View={ZennStyleLinkCardView}
+    code={ZENN_STYLE_CODE}
+  />
+);

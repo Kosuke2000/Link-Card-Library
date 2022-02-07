@@ -5,11 +5,17 @@ import { LinkCardViewProps } from "@/types/LinkCard";
 
 import { urlToDomain } from "@/utils/urlToDomain";
 
-export const TwitterStyleLinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
+export const TwitterStyleLinkCardView: VFC<LinkCardViewProps> = ({
+  ogp,
+  showCode,
+}) => {
   const { title, description, pageUrl, ogImgUrl } = ogp;
 
   return (
-    <article className="w-full max-w-lg rounded-xl border border-gray-300 border-solid">
+    <article
+      onClick={showCode}
+      className="w-full max-w-lg rounded-xl border border-gray-300 border-solid"
+    >
       <img
         src={ogImgUrl}
         className="object-cover w-full h-48 rounded-t-xl md:h-60"

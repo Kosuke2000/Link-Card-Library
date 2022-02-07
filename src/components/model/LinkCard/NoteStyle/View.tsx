@@ -5,13 +5,19 @@ import { LinkCardViewProps } from "@/types/LinkCard";
 
 import { urlToDomain } from "@/utils/urlToDomain";
 
-export const NoteStyleLinkCardView: VFC<LinkCardViewProps> = ({ ogp }) => {
+export const NoteStyleLinkCardView: VFC<LinkCardViewProps> = ({
+  ogp,
+  showCode,
+}) => {
   const { title, description, faviconUrl, pageUrl, ogImgUrl } = ogp;
   const m = faviconUrl ? "ml-2" : "";
   const w = ogImgUrl ? "w-full md:w-3/5" : "w-full";
 
   return (
-    <article className="flex justify-between w-full max-w-2xl h-32 rounded border border-gray-200 hover:border-gray-400 border-solid md:h-40">
+    <article
+      onClick={showCode}
+      className="flex justify-between w-full max-w-2xl h-32 rounded border border-gray-200 hover:border-gray-400 border-solid md:h-40"
+    >
       <div
         className={`flex overflow-hidden flex-col justify-evenly max-h-30 p-3   ${w}`}
       >
