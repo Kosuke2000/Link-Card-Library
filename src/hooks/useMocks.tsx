@@ -13,12 +13,14 @@ export const useMocks = () => {
     { mockdata: mockOgpDataList[0] },
     { mockdata: mockOgpDataList[1] },
     { mockdata: mockOgpDataList[2] },
+    { mockdata: mockOgpDataList[3] },
   ] as const;
 
   const ACTION = [
     { type: "normal" },
-    { type: "longtitle" },
-    { type: "nofav" },
+    { type: "long" },
+    { type: "noFav" },
+    { type: "noImg" },
   ] as const;
 
   const ActionStoreMap = ACTION.map((action, i) => {
@@ -33,6 +35,8 @@ export const useMocks = () => {
         return STORE[1];
       case ACTION[2].type:
         return STORE[2];
+      case ACTION[3].type:
+        return STORE[3];
       default:
         return state;
     }
@@ -66,7 +70,7 @@ export const useMocks = () => {
 
           return (
             <button
-              className={`p-2 mx-px ${bgColor}`}
+              className={`p-2  mx-px ${bgColor}`}
               key={action.type}
               onClick={() => dispatch(action)}
             >
