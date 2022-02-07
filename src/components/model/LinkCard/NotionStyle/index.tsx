@@ -19,7 +19,10 @@ const NOTION_STYLE_CODE = `export const NotionStyleLinkCardView: VFC<LinkCardVie
   const ml = faviconUrl ? "ml-2" : "";
 
   return (
-    <article className="flex justify-between w-full max-w-3xl h-32 rounded border border-gray-300 border-solid">
+    <article 
+      onClick={showCode}
+      className="flex justify-between w-full max-w-3xl h-32 hover:bg-gray-100 rounded border border-gray-300 border-solid"
+    >
       <div
         className={\`flex overflow-hidden flex-col justify-between p-5 py-4 \${w}\`}
       >

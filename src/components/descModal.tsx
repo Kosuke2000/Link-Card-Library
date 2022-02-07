@@ -37,13 +37,19 @@ export const Desc: VFC<DescProps> = ({ hidden }) => {
       className={`flex overflow-y-hidden px-4 fixed top-0 left-0 z-10 justify-center items-center w-screen h-screen bg-slate-200/75  ${u}`}
     >
       <div
-        className={`flex flex-col justify-center items-center px-8 w-96  h-80 bg-white dark:bg-slate-900  shadow  animate-fade-in rounded-lg `}
+        className={`flex flex-col justify-center items-center px-8 w-96  h-96 bg-white dark:bg-slate-900  shadow  animate-fade-in rounded-lg `}
       >
         <div className="flex flex-col items-center pb-5">
-          <h1 className="p-3 text-3xl font-semibold">Site Description</h1>
-          <p>Reproduced the link cards of famous sites.</p>
-          <p>Click on the link card to see the code.</p>
-          <p> Styling was done with Tailwind.</p>
+          <h1 className="p-3 text-3xl font-semibold text-center">
+            Site Description
+          </h1>
+          <p className="text-center">
+            Reproduced the link cards of famous sites.
+          </p>
+          <p className="text-center">Click on the link card to see the code.</p>
+          <p className="text-center">
+            Tailwind CSS in React with eslint-plugin-tailwindcss.
+          </p>
         </div>
         <button
           onClick={onHidden}
