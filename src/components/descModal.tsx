@@ -24,7 +24,7 @@ interface DescProps {
 export const Desc: VFC<DescProps> = ({ hidden }) => {
   const [u, setU] = useState("");
 
-  const onClose = () => {
+  const onHidden = () => {
     setU("animate-fade-out");
     setTimeout(() => {
       hidden();
@@ -33,15 +33,20 @@ export const Desc: VFC<DescProps> = ({ hidden }) => {
 
   return (
     <div
-      className={`flex overflow-y-hidden fixed top-0 left-0 z-10 justify-center items-center w-screen h-screen bg-slate-200/75  ${u}`}
+      onClick={onHidden}
+      className={`flex overflow-y-hidden px-4 fixed top-0 left-0 z-10 justify-center items-center w-screen h-screen bg-slate-200/75  ${u}`}
     >
       <div
-        className={`flex flex-col justify-center items-center py-8 w-4/5 h-4/5 bg-white dark:bg-slate-900 rounded shadow  animate-fade-in  `}
+        className={`flex flex-col justify-center items-center px-8 w-96  h-80 bg-white dark:bg-slate-900  shadow  animate-fade-in rounded-lg `}
       >
-        <h1>このサイトの説明</h1>
-        <p>有名サイトのリンクカードを再現しました。</p>
+        <div className="flex flex-col items-center pb-5">
+          <h1 className="p-3 text-3xl font-semibold">Site Description</h1>
+          <p>Reproduced the link cards of famous sites.</p>
+          <p>Click on the link card to see the code.</p>
+          <p> Styling was done with Tailwind.</p>
+        </div>
         <button
-          onClick={onClose}
+          onClick={onHidden}
           className="py-2 px-4 font-semibold text-blue-700 hover:text-white dark:text-white bg-transparent hover:bg-blue-500 dark:hover:bg-slate-800 rounded border border-blue-500 hover:border-transparent dark:border-yellow-300 "
         >
           Close
