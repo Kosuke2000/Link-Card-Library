@@ -1,6 +1,8 @@
 import { BsQuestionCircleFill } from "react-icons/bs";
 
-import { Desc, useDesc } from "@/components/model/LinkCard/descModal";
+import { useDesc } from "@/hooks/useDesc";
+
+import { Desc } from "@/components/model/LinkCard/Desc";
 import { HatebuStyle } from "@/components/model/LinkCard/HatebuStyle";
 import { NoteStyle } from "@/components/model/LinkCard/NoteStyle";
 import { NotionStyle } from "@/components/model/LinkCard/NotionStyle";
@@ -26,7 +28,6 @@ export const Top: NextPage = () => {
       <NoteStyle />
       <HatebuStyle />
       <TwitterStyle />
-      {/* <UserTable users={mockUserList} /> */}
     </main>
   );
 };
