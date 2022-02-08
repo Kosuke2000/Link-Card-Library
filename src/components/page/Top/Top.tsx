@@ -23,7 +23,10 @@ export const Top: NextPage = () => {
       <h1 className="p-8 text-4xl font-semibold text-center text-white md:text-6xl">
         Link Card Library
       </h1>
-      <BsQuestionCircleFill onClick={appear} className=" text-2xl text-white" />
+      <BsQuestionCircleFill
+        onClick={appear}
+        className=" text-2xl text-white hover:text-white/40"
+      />
       {appearDesc && <Desc hidden={onHidden} />}
       <NotionStyle />
       <QittaStyle />
@@ -33,7 +36,7 @@ export const Top: NextPage = () => {
       <TwitterStyle />
       <Spacer size={60} />
       <a href="https://github.com/Kosuke2000/Link-Card-Gallery">
-        <GoMarkGithub className="text-6xl text-white" />
+        <GoMarkGithub className="text-6xl text-white hover:text-white/40" />
       </a>
       <Spacer size={32} />
     </main>
