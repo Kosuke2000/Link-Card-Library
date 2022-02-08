@@ -17,7 +17,7 @@ export const Top: NextPage = () => {
 
   return (
     <main className="flex flex-col justify-center items-center p-4 pb-12 w-screen bg-slate-500 ">
-      <h1 className="p-8 text-6xl font-semibold text-white">
+      <h1 className="p-8 text-4xl font-semibold text-center text-white md:text-6xl">
         Link Card Library
       </h1>
       <BsQuestionCircleFill onClick={appear} className=" text-2xl text-white" />
