@@ -17,7 +17,7 @@ export const useMocks = () => {
   ] as const;
 
   const ACTION = [
-    { type: "normal" },
+    { type: "fit" },
     { type: "overflow" },
     { type: "noFav" },
     { type: "noImg" },
