@@ -32,7 +32,7 @@ export const TwitterStyleLinkCardView: VFC<LinkCardViewProps> = ({
           </div>
         </>
       ) : (
-        <p className="text-4xl font-semibold text-center">
+        <p className="text-base font-semibold text-center md:text-2xl">
           Unable to render Card preview
         </p>
       )}
