@@ -19,8 +19,8 @@ export const LinkCardContainerC: VFC<O> = ({ name, View, code }) => {
   const [isOpen, open, close] = useToggle();
 
   return (
-    <div className="flex flex-col items-center py-8 w-full">
-      <h1 className="p-4 text-2xl font-semibold text-white md:text-3xl">
+    <div className="flex flex-col items-center py-6 w-full md:py-8">
+      <h1 className="p-4 pb-6 text-2xl font-semibold text-white md:pb-8 md:text-3xl">
         {name}
       </h1>
       <div className="flex flex-col justify-between items-center py-12 px-4 w-full max-w-4xl bg-white rounded-2xl">
