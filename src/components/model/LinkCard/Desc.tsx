@@ -1,6 +1,6 @@
 import { useState, VFC } from "react";
-// import SyntaxHighlighter from "react-syntax-highlighter";
-// import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { docco } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 interface DescProps {
   hidden: () => void;
@@ -33,13 +33,13 @@ export const Desc: VFC<DescProps> = ({ hidden }) => {
           <p className="p-3 pb-5 text-xl font-semibold text-center">
             Type of ogp in the snippet is:
           </p>
-          {/* <SyntaxHighlighter
+          <SyntaxHighlighter
             className="w-11/12"
             language="typescript"
             style={docco}
           >
             {CODE}
-          </SyntaxHighlighter> */}
+          </SyntaxHighlighter>
         </div>
         <button
           onClick={onHidden}
@@ -52,10 +52,10 @@ export const Desc: VFC<DescProps> = ({ hidden }) => {
   );
 };
 
-// const CODE = `{
-//   title: string;
-//   description: string;
-//   faviconUrl: string;
-//   pageUrl: string;
-//   ogImgUrl: string;
-// };`;
+const CODE = `{
+   title: string;
+   description: string;
+   faviconUrl: string;
+   pageUrl: string;
+   ogImgUrl: string;
+ };`;
