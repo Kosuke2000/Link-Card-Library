@@ -29,12 +29,12 @@ export const Desc: VFC<DescProps> = ({ hidden }) => {
           <p className="text-center">The list of link cards with:</p>
           <p className="text-center">show sample code.</p>
           <p className="text-center">code snippets.</p>
-          <p className="text-center">Click on link cards!</p>
+          <p className="text-center">Click on them!</p>
           <p className="p-3 pb-5 text-xl font-semibold text-center">
             Type of ogp in the snippet is:
           </p>
           <SyntaxHighlighter
-            className="w-10/12"
+            className="w-11/12"
             language="typescript"
             style={docco}
           >

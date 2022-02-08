@@ -16,7 +16,7 @@ export const Top: NextPage = () => {
   const [appearDesc, appear, onHidden] = useDesc();
 
   return (
-    <main className="flex flex-col justify-center items-center p-4 w-screen bg-slate-500 ">
+    <main className="flex flex-col justify-center items-center p-4 pb-12 w-screen bg-slate-500 ">
       <h1 className="p-8 text-6xl font-semibold text-white">
         Link Card Library
       </h1>
