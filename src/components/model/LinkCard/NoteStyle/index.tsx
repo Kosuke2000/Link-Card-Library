@@ -7,7 +7,7 @@ import { NoteStyleLinkCardView } from "./View";
 
 export const NoteStyle: VFC = () => (
   <LinkCardContainerC
-    name="Note Style"
+    name="note Style"
     View={NoteStyleLinkCardView}
     code={NOTE_STYLE_CODE}
   />

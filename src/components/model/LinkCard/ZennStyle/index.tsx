@@ -5,7 +5,7 @@ import { ZennStyleLinkCardView } from "./View";
 
 export const ZennStyle: VFC = () => (
   <LinkCardContainerC
-    name="Zeen Style"
+    name="Zenn Style"
     View={ZennStyleLinkCardView}
     code={ZENN_STYLE_CODE}
   />
