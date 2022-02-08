@@ -13,13 +13,11 @@ export const TwitterStyle: VFC = () => (
 
 const TWITTER_STYLE_CODE = `export const TwitterStyleLinkCardView: VFC<LinkCardViewProps> = ({
   ogp,
-  showCode,
 }) => {
   const { title, description, pageUrl, ogImgUrl } = ogp;
 
   return (
     <article
-      onClick={showCode}
       className="w-full max-w-lg rounded-xl border border-gray-300 border-solid"
     >
       <img

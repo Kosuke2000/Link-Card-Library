@@ -13,7 +13,6 @@ export const ZennStyle: VFC = () => (
 
 const ZENN_STYLE_CODE = `export const ZennStyleLinkCardView: VFC<LinkCardViewProps> = ({
   ogp,
-  showCode,
 }) => {
   const { title, description, faviconUrl, pageUrl, ogImgUrl } = ogp;
   const m = faviconUrl ? "ml-2" : "";
@@ -21,7 +20,6 @@ const ZENN_STYLE_CODE = `export const ZennStyleLinkCardView: VFC<LinkCardViewPro
 
   return (
     <article
-      onClick={showCode}
       className="flex justify-between w-full max-w-3xl h-32 rounded-lg border border-blue-100 border-solid"
     >
       <div

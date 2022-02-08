@@ -13,7 +13,7 @@ import { ZennStyle } from "@/components/model/LinkCard/ZennStyle";
 import type { NextPage } from "next";
 
 export const Top: NextPage = () => {
-  const [appearDesc, appear, hidden] = useDesc();
+  const [appearDesc, appear, onHidden] = useDesc();
 
   return (
     <main className="flex flex-col justify-center items-center p-4 w-screen bg-slate-500 ">
@@ -21,7 +21,7 @@ export const Top: NextPage = () => {
         Link Card Library
       </h1>
       <BsQuestionCircleFill onClick={appear} className=" text-2xl text-white" />
-      {appearDesc && <Desc hidden={hidden} />}
+      {appearDesc && <Desc hidden={onHidden} />}
       <NotionStyle />
       <QittaStyle />
       <ZennStyle />

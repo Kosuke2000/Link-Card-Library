@@ -20,7 +20,6 @@ const NOTION_STYLE_CODE = `export const NotionStyleLinkCardView: VFC<LinkCardVie
 
   return (
     <article 
-      onClick={showCode}
       className="flex justify-between w-full max-w-3xl h-32 hover:bg-gray-100 rounded border border-gray-300 border-solid"
     >
       <div

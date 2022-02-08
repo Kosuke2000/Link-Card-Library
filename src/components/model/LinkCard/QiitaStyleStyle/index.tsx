@@ -15,13 +15,11 @@ export const QittaStyle: VFC = () => (
 
 const QIITA_STYLE_CODE = `export const QiitaStyleLinkCardView: VFC<LinkCardViewProps> = ({
   ogp,
-  showCode,
 }) => {
   const { title, pageUrl, ogImgUrl } = ogp;
 
   return (
     <article
-      onClick={showCode}
       className="flex justify-between w-full max-w-3xl h-32 border border-gray-200 border-solid"
     >
       <div className="flex overflow-hidden flex-col justify-center p-5">

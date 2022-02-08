@@ -13,7 +13,6 @@ export const HatebuStyle: VFC = () => (
 
 const HATEBU_STYLE_CODE = `export const HatebuStyleLinkCardView: VFC<LinkCardViewProps> = ({
   ogp,
-  showCode,
 }) => {
   const { title, description, faviconUrl, pageUrl, ogImgUrl } = ogp;
   const m = faviconUrl ? "ml-1" : "";
@@ -21,7 +20,6 @@ const HATEBU_STYLE_CODE = `export const HatebuStyleLinkCardView: VFC<LinkCardVie
 
   return (
     <article
-      onClick={showCode}
       className="flex justify-between p-3 w-full max-w-lg h-36 rounded-sm border border-gray-200 border-solid"
     >
       <div

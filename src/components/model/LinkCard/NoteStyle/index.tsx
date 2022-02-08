@@ -15,7 +15,6 @@ export const NoteStyle: VFC = () => (
 
 const NOTE_STYLE_CODE = `export const NoteStyleLinkCardView: VFC<LinkCardViewProps> = ({
   ogp,
-  showCode,
 }) => {
   const { title, description, faviconUrl, pageUrl, ogImgUrl } = ogp;
   const m = faviconUrl ? "ml-2" : "";
@@ -23,7 +22,6 @@ const NOTE_STYLE_CODE = `export const NoteStyleLinkCardView: VFC<LinkCardViewPro
 
   return (
     <article
-      onClick={showCode}
       className="flex justify-between w-full max-w-2xl h-32 rounded border border-gray-200 hover:border-gray-400 border-solid md:h-40"
     >
       <div
