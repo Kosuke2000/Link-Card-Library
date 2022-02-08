@@ -1,3 +1,4 @@
+import { AiFillTwitterCircle } from "react-icons/ai";
 import { BsQuestionCircleFill } from "react-icons/bs";
 import { GoMarkGithub } from "react-icons/go";
 
@@ -35,9 +36,15 @@ export const Top: NextPage = () => {
       <HatebuStyle />
       <TwitterStyle />
       <Spacer size={60} />
-      <a href="https://github.com/Kosuke2000/Link-Card-Gallery">
-        <GoMarkGithub className="text-6xl text-white hover:text-white/40" />
-      </a>
+      <div className="flex items-center">
+        <a href="https://github.com/Kosuke2000/Link-Card-Gallery">
+          <GoMarkGithub className="text-6xl text-white hover:text-white/40" />
+        </a>
+        <Spacer size={8} />
+        <a href="https://twitter.com/youuchiharu">
+          <AiFillTwitterCircle className="text-7xl text-white hover:text-white/40" />
+        </a>
+      </div>
       <Spacer size={32} />
     </main>
   );
