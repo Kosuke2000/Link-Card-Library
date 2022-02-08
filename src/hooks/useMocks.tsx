@@ -18,7 +18,7 @@ export const useMocks = () => {
 
   const ACTION = [
     { type: "normal" },
-    { type: "long" },
+    { type: "overflow" },
     { type: "noFav" },
     { type: "noImg" },
   ] as const;
@@ -70,7 +70,7 @@ export const useMocks = () => {
 
           return (
             <button
-              className={`p-2  mx-px ${bgColor}`}
+              className={`md:w-20 py-2 md:text-base text-sm w-16  mx-px ${bgColor}`}
               key={action.type}
               onClick={() => dispatch(action)}
             >
