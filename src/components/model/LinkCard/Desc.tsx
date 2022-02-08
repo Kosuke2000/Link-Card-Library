@@ -19,10 +19,10 @@ export const Desc: VFC<DescProps> = ({ hidden }) => {
   return (
     <div
       onClick={onHidden}
-      className={`flex overflow-y-hidden px-4 fixed top-0 left-0 z-10 justify-center items-center w-screen h-screen bg-slate-200/75  ${u}`}
+      className={`flex overflow-y-hidden px-4 fixed top-0 left-0 z-10 justify-center items-center w-screen h-screen  bg-slate-200/75  ${u}`}
     >
       <div
-        className={`flex flex-col justify-center items-center p-8 min-w-max  min-h-max bg-white dark:bg-slate-900  shadow  animate-fade-in rounded-lg `}
+        className={`flex flex-col justify-center items-center w-96 py-4 md:min-w-max  min-h-max bg-white dark:bg-slate-900  shadow  animate-fade-in rounded-lg `}
       >
         <div className="flex flex-col items-center pb-5">
           <h1 className="p-3 text-xl font-semibold text-center">Overview</h1>
@@ -34,7 +34,7 @@ export const Desc: VFC<DescProps> = ({ hidden }) => {
             Type of ogp in the snippet is:
           </p>
           <SyntaxHighlighter
-            className="w-full"
+            className="w-10/12"
             language="typescript"
             style={docco}
           >
