@@ -1,4 +1,6 @@
 import { useState, VFC } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 interface DescProps {
   hidden: () => void;
@@ -20,19 +22,24 @@ export const Desc: VFC<DescProps> = ({ hidden }) => {
       className={`flex overflow-y-hidden px-4 fixed top-0 left-0 z-10 justify-center items-center w-screen h-screen bg-slate-200/75  ${u}`}
     >
       <div
-        className={`flex flex-col justify-center items-center px-8 w-96  h-96 bg-white dark:bg-slate-900  shadow  animate-fade-in rounded-lg `}
+        className={`flex flex-col justify-center items-center p-8 min-w-max  min-h-max bg-white dark:bg-slate-900  shadow  animate-fade-in rounded-lg `}
       >
         <div className="flex flex-col items-center pb-5">
-          <h1 className="p-3 text-3xl font-semibold text-center">
-            Site Description
-          </h1>
-          <p className="text-center">
-            Reproduced the link cards of famous sites.
+          <h1 className="p-3 text-xl font-semibold text-center">Overview</h1>
+          <p className="text-center">The list of link cards with:</p>
+          <p className="text-center">show sample code.</p>
+          <p className="text-center">code snippets.</p>
+          <p className="text-center">Click on link cards!</p>
+          <p className="p-3 pb-5 text-xl font-semibold text-center">
+            Type of ogp in the snippet is:
           </p>
-          <p className="text-center">Click on the link card to see the code.</p>
-          <p className="text-center">
-            Tailwind CSS in React with eslint-plugin-tailwindcss.
-          </p>
+          <SyntaxHighlighter
+            className="w-full"
+            language="typescript"
+            style={docco}
+          >
+            {CODE}
+          </SyntaxHighlighter>
         </div>
         <button
           onClick={onHidden}
@@ -44,3 +51,11 @@ export const Desc: VFC<DescProps> = ({ hidden }) => {
     </div>
   );
 };
+
+const CODE = `{
+  title: string;
+  description: string;
+  faviconUrl: string;
+  pageUrl: string;
+  ogImgUrl: string;
+};`;
