@@ -27,8 +27,8 @@ export const Desc: VFC<DescProps> = ({ hidden }) => {
         <div className="flex flex-col items-center pb-5">
           <h1 className="p-3 text-xl font-semibold text-center">Overview</h1>
           <p className="px-8 text-center ">
-            You can easily click link cards and check the code styled with
-            Tailwind css!
+            Click and get the code of the link card. We styled them with
+            Tailwind CSS.
           </p>
           <p className="p-3 pb-5 text-xl font-semibold text-center">
             Type of ogp in the snippet is:

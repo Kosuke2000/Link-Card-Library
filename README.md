@@ -2,7 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 # Link Card Library
 
-You can easily click link cards and check the code styled with Tailwind css!
+Click and get the code of the link card.
+We styled them with Tailwind CSS.
 
 I referred to the following services and websites. Thx!
 
