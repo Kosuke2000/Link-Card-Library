@@ -17,10 +17,10 @@ export const useMocks = () => {
   ] as const;
 
   const ACTION = [
-    { type: "fit" },
-    { type: "overflow" },
-    { type: "noFav" },
-    { type: "noImg" },
+    { type: "Normal" },
+    { type: "Overflow" },
+    { type: "No Icon" },
+    { type: "No Img" },
   ] as const;
 
   const ActionStoreMap = ACTION.map((action, i) => {

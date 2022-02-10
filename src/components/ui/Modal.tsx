@@ -37,7 +37,7 @@ export const Modal: VFC<ModalProps> = ({ title, code, close }) => {
       className={`flex overflow-y-hidden fixed top-0 left-0 z-10 justify-center items-center w-screen h-screen bg-slate-200/75  ${u}`}
     >
       <div
-        className={`flex flex-col justify-center items-center py-8 w-4/5 h-4/5 bg-white  rounded shadow  animate-fade-in  `}
+        className={`flex flex-col justify-center items-center py-8 px-4 w-4/5 h-4/5 bg-white  rounded shadow  animate-fade-in  `}
       >
         <h2 className="pb-6 text-2xl font-bold">{title}</h2>
         <SyntaxHighlighter
