@@ -37,11 +37,19 @@ export const Top: NextPage = () => {
       <TwitterStyle />
       <Spacer size={60} />
       <div className="flex items-center">
-        <a href="https://github.com/Kosuke2000/Link-Card-Gallery">
+        <a
+          target="_blank"
+          href="https://github.com/Kosuke2000/Link-Card-Gallery"
+          rel="noreferrer"
+        >
           <GoMarkGithub className="text-6xl text-white hover:text-white/40" />
         </a>
         <Spacer size={8} />
-        <a href="https://twitter.com/youuchiharu">
+        <a
+          target="_blank"
+          href="https://twitter.com/youuchiharu"
+          rel="noreferrer"
+        >
           <AiFillTwitterCircle className="text-7xl text-white hover:text-white/40" />
         </a>
       </div>
