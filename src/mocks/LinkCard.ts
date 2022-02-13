@@ -1,56 +1,47 @@
 import { OgpData } from "@/types/LinkCard";
 
 export const mockOgpData: OgpData = {
-  title: "State as a Snapshot",
-  description: "A JavaScript library for building ",
+  title: "Click here to view the code snippet.",
+  description: "Click here to view the code snippet.",
   faviconUrl: "https://beta.reactjs.org/favicon.ico",
-  pageUrl: "https://beta.reactjs.org/learn/state",
+  pageUrl: "https://Click.here/to.view.the.code.snippet",
   ogImgUrl: "https://beta.reactjs.org/logo-og.png",
 };
 
 export const mockOgpData1: OgpData = {
   title:
-    "State variables might look like regular JavaScript variables that you can read and write to. However, state behaves more like a snapshot. Setting it does not change the state variable you already have, but instead triggers a re-render.",
-  description: "A JavaScript library for building ",
+    "Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet.",
+
+  description:
+    "Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet.",
   faviconUrl: "https://beta.reactjs.org/favicon.ico",
-  pageUrl: "https://beta.reactjs.org/learn/state-as-a-snapshot",
+  pageUrl: "https://Click.here/to.view.the.code.snippet",
   ogImgUrl: "https://beta.reactjs.org/logo-og.png",
 };
 
 export const mockOgpData2: OgpData = {
-  title:
-    "State variables might look like regular JavaScript variables that you can read and write to. However, state behaves more like a snapshot. Setting it does not change the state variable you already have, but instead triggers a re-render.",
-
+  title: "Click here to view the code snippet.",
   description:
-    "State variables might look like regular JavaScript variables that you can read and write to. However, state behaves more like a snapshot. Setting it does not change the state variable you already have, but instead triggers a re-render.",
-  faviconUrl: "https://beta.reactjs.org/favicon.ico",
-  pageUrl: "https://beta.reactjs.org/learn/state-as-a-snapshot",
+    "Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet.Click here to view the code snippet.",
+  faviconUrl: "",
+  pageUrl: "https://Click.here/to.view.the.code.snippet",
   ogImgUrl: "https://beta.reactjs.org/logo-og.png",
 };
 
 export const mockOgpData3: OgpData = {
-  title: "State as a Snapshot",
-  description:
-    "State variables might look like regular JavaScript variables that you can read and write to. However, state behaves more like a snapshot. Setting it does not change the state variable you already have, but instead triggers a re-render.",
-  faviconUrl: "",
-  pageUrl: "https://beta.reactjs.org/learn/state-as-a-snapshot",
-  ogImgUrl: "https://beta.reactjs.org/logo-og.png",
-};
-
-export const mockOgpData4: OgpData = {
   title:
-    "State variables might look like regular JavaScript variables that you can read and write to. However, state behaves more like a snapshot. Setting it does not change the state variable you already have, but instead triggers a re-render.",
+    "Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet.",
 
   description:
-    "State variables might look like regular JavaScript variables that you can read and write to. However, state behaves more like a snapshot. Setting it does not change the state variable you already have, but instead triggers a re-render.",
+    "Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet. Click here to view the code snippet.Click here to view the code snippet.",
   faviconUrl: "https://beta.reactjs.org/favicon.ico",
-  pageUrl: "https://beta.reactjs.org/learn/state-as-a-snapshot",
+  pageUrl: "https://Click.here/to.view.the.code.snippet",
   ogImgUrl: "",
 };
 
 export const mockOgpDataList = [
   mockOgpData,
+  mockOgpData1,
   mockOgpData2,
   mockOgpData3,
-  mockOgpData4,
 ];
